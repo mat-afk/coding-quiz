@@ -9,11 +9,12 @@ const initialState = {
 };
 
 const reducer = (state, action) => {
-  console.log(state, action);
-
   switch (action.type) {
-    case "CHANGE_STAGE":
-      return state;
+    case "CHANGE_STATE":
+      return {
+        ...state,
+        stage: STAGES[1],
+      };
 
     default:
       return state;
