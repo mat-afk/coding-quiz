@@ -1,8 +1,13 @@
+import { useContext } from "react";
+import { QuizContext } from "../context/quiz";
+
 import QuizIcon from "../assets/quiz.svg";
 
 import "./StartingPage.css";
 
 const StartingPage = () => {
+  const { name } = useContext(QuizContext);
+
   return (
     <div id="starting-container">
       <h2>Welcome!</h2>
