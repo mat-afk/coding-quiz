@@ -20,9 +20,14 @@ const data = [
     answer: "float",
   },
   {
-    question: "Qual dos métodos a seguir seleciona um elemento?",
-    options: ["querySelector", "parseInt", "sort", "reduce"],
-    answer: "querySelector",
+    question: "What is the purpose of the typeof operator in JavaScript?",
+    options: [
+      "It defines a new variable.",
+      "It checks if a variable is null.",
+      "It returns the data type of a variable.",
+      "It converts a variable to a string.",
+    ],
+    answer: "It returns the data type of a variable.",
   },
   {
     question: "Which of the following methods selects an element?",
