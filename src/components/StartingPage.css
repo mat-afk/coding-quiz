@@ -1,0 +1,17 @@
+#starting-container {
+  text-align: center;
+  max-width: 500px;
+}
+
+#starting-container h2,
+#starting-container p {
+  margin-bottom: 1rem;
+}
+
+#starting-container p {
+  color: #8345de;
+}
+
+#starting-container img {
+  margin-top: 2rem;
+}
