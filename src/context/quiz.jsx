@@ -6,6 +6,7 @@ const STAGES = ["Start", "Quiz", "End"];
 const initialState = {
   stage: STAGES[0],
   questions: questions,
+  currentQuestion: 0,
 };
 
 const reducer = (state, action) => {
@@ -14,6 +15,13 @@ const reducer = (state, action) => {
       return {
         ...state,
         stage: STAGES[1],
+      };
+
+    case "SHUFFLE_QUESTIONS":
+      const shuffledQuestions = state.questions.sort(() => Math.random() - 0.5);
+      return {
+        ...state,
+        questions: shuffledQuestions,
       };
 
     default:

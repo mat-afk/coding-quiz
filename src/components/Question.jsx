@@ -5,8 +5,24 @@ import "./Question.css";
 
 const Question = () => {
   const [quizState, dispatch] = useContext(QuizContext);
- 
-  return <div>Question</div>;
+  const { currentQuestion, questions } = quizState;
+
+  return (
+    <div id="question-container">
+      <p>
+        Question {currentQuestion + 1} of {questions.length}
+      </p>
+      <h2>{questions[currentQuestion].question}</h2>
+      <div id="options-container">
+        {questions[currentQuestion].options.map((option, index) => (
+          <p key={index}>
+            {String.fromCharCode(index + 97)}. {option}
+          </p>
+        ))}
+      </div>
+      <button>Continue</button>
+    </div>
+  );
 };
 
 export default Question;
