@@ -1,0 +1,19 @@
+#question-container {
+  text-align: center;
+  min-width: 500px;
+  background-color: #8345de;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+#question-container h2 {
+  margin-bottom: 2rem;
+}
+
+#question-container p {
+  margin-bottom: 1rem;
+}
+
+#question-container button {
+  border: 2px solid #fff;
+}
