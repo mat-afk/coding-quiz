@@ -20,7 +20,9 @@ const Question = () => {
           </p>
         ))}
       </div>
-      <button>Continue</button>
+      <button onClick={() => dispatch({ type: "NEXT_QUESTION" })}>
+        Continue
+      </button>
     </div>
   );
 };

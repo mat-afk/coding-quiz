@@ -24,6 +24,19 @@ const reducer = (state, action) => {
         questions: shuffledQuestions,
       };
 
+    case "NEXT_QUESTION":
+      if (state.currentQuestion === state.questions.length - 1) {
+        return {
+          ...state,
+          stage: STAGES[2],
+        };
+      }
+
+      return {
+        ...state,
+        currentQuestion: state.currentQuestion + 1,
+      };
+
     default:
       return state;
   }

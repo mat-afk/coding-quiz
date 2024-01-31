@@ -3,6 +3,7 @@ import { useContext, useEffect } from "react";
 import { QuizContext } from "./context/quiz";
 import StartingPage from "./components/StartingPage";
 import Question from "./components/Question";
+import GameFinished from "./components/GameFinished";
 
 import "./App.css";
 
@@ -18,6 +19,7 @@ function App() {
       <h1>Coding Quiz</h1>
       {quizState.stage === "Start" && <StartingPage />}
       {quizState.stage === "Quiz" && <Question />}
+      {quizState.stage === "End" && <GameFinished />}
     </div>
   );
 }
