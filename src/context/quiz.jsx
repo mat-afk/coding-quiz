@@ -25,7 +25,7 @@ const reducer = (state, action) => {
       };
 
     case "NEXT_QUESTION":
-      if (state.currentQuestion === state.questions.length - 1) {
+      if (!questions[state.currentQuestion + 1]) {
         return {
           ...state,
           stage: STAGES[2],
