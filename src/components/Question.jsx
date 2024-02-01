@@ -9,6 +9,13 @@ const Question = () => {
   const [quizState, dispatch] = useContext(QuizContext);
   const { currentQuestion, questions } = quizState;
 
+  const handleSelectOption = (option) => {
+    dispatch({
+      type: "CHECK_ANSWER",
+      payload: { answer: questions[currentQuestion].answer, selected: option },
+    });
+  };
+
   return (
     <div id="question-container">
       <p>
@@ -17,12 +24,19 @@ const Question = () => {
       <h2>{questions[currentQuestion].question}</h2>
       <div id="options-container">
         {questions[currentQuestion].options.map((option, index) => (
-          <Option key={index} option={option} />
+          <Option
+            key={index}
+            option={option}
+            answer={questions[currentQuestion].answer}
+            selectOption={() => handleSelectOption(option)}
+          />
         ))}
       </div>
-      <button onClick={() => dispatch({ type: "NEXT_QUESTION" })}>
-        Continue
-      </button>
+      {quizState.optionSelected && (
+        <button onClick={() => dispatch({ type: "NEXT_QUESTION" })}>
+          Continue
+        </button>
+      )}
     </div>
   );
 };

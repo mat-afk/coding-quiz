@@ -8,6 +8,7 @@ const initialState = {
   questions: questions,
   currentQuestion: 0,
   score: 0,
+  optionSelected: "",
 };
 
 const reducer = (state, action) => {
@@ -40,6 +41,17 @@ const reducer = (state, action) => {
 
     case "RESTART":
       return initialState;
+
+    case "CHECK_ANSWER":
+      if (state.answerSelectd) return state;
+
+      const { answer, selected } = action.payload;
+
+      return {
+        ...state,
+        score: answer === selected ? state.score + 1 : state.score,
+        optionSelected: selected,
+      };
 
     default:
       return state;

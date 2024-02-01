@@ -15,3 +15,7 @@
 #options-container .option p {
   margin: 0.5rem 0;
 }
+
+.selected {
+  opacity: 1;
+}
