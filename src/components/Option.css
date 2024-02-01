@@ -19,3 +19,17 @@
 .selected {
   opacity: 1;
 }
+
+.not-selected {
+  opacity: 0.4;
+}
+
+.correct {
+  background-color: #3fd03a;
+  font-weight: bold;
+}
+
+.wrong {
+  background-color: #d03a3a;
+  font-weight: bold;
+}
