@@ -12,6 +12,6 @@
   opacity: 1;
 }
 
-#options-container p {
+#options-container .option p {
   margin: 0.5rem 0;
 }
