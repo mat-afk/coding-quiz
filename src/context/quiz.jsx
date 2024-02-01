@@ -7,6 +7,7 @@ const initialState = {
   stage: STAGES[0],
   questions: questions,
   currentQuestion: 0,
+  score: 0,
 };
 
 const reducer = (state, action) => {
@@ -36,6 +37,9 @@ const reducer = (state, action) => {
         ...state,
         currentQuestion: state.currentQuestion + 1,
       };
+
+    case "RESTART":
+      return initialState;
 
     default:
       return state;
