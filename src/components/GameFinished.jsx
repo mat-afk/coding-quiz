@@ -13,7 +13,7 @@ const GameFinished = () => {
       <h2>Game Finished</h2>
       <p>Final score: {score}</p>
       <p>
-        You got {score} of {questions.length} questions right!
+        You got {score} out of {questions.length} questions right!
       </p>
       <img src={WellDoneIcon} alt="Well done icon" />
       <button onClick={() => dispatch({ type: "RESTART" })}>Restart</button>
