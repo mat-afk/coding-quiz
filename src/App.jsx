@@ -11,10 +11,6 @@ import "./App.css";
 function App() {
   const [quizState, dispatch] = useContext(QuizContext);
 
-  useEffect(() => {
-    dispatch({ type: "SHUFFLE_QUESTIONS" });
-  }, []);
-
   return (
     <div className="App">
       <h1>Coding Quiz</h1>

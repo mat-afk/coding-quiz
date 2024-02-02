@@ -19,6 +19,17 @@ const reducer = (state, action) => {
         stage: STAGES[1],
       };
 
+    case "PICK_CATEGORY":
+      const category = action.payload;
+      const categoryQuestions = state.questions.filter(
+        (question) => question.category === category
+      );
+      return {
+        ...state,
+        stage: STAGES[2],
+        questions: categoryQuestions[0].questions,
+      };
+
     case "SHUFFLE_QUESTIONS":
       const shuffledQuestions = state.questions.sort(() => Math.random() - 0.5);
       return {
@@ -27,10 +38,10 @@ const reducer = (state, action) => {
       };
 
     case "NEXT_QUESTION":
-      if (!questions[state.currentQuestion + 1]) {
+      if (!state.questions[state.currentQuestion + 1]) {
         return {
           ...state,
-          stage: STAGES[2],
+          stage: STAGES[3],
         };
       }
 
