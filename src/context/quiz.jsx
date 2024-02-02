@@ -74,6 +74,34 @@ const reducer = (state, action) => {
         optionSelected: selected,
       };
 
+    case "REMOVE_OPTION":
+      const options = state.questions[state.currentQuestion].options;
+      const correctOption = state.questions[state.currentQuestion].answer;
+
+      const incorrectOptions = options.filter(
+        (option) => option !== correctOption
+      );
+
+      const randomIndex = Math.floor(Math.random() * incorrectOptions.length);
+
+      const updatedOptions = state.questions.map((question, index) => {
+        if (index === state.currentQuestion) {
+          return {
+            ...question,
+            options: question.options.filter(
+              (option) => option !== incorrectOptions[randomIndex]
+            ),
+          };
+        }
+        return question;
+      });
+
+      return {
+        ...state,
+        questions: updatedOptions,
+        help: "remove",
+      };
+
     default:
       return state;
   }

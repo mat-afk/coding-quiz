@@ -39,6 +39,9 @@ const Question = () => {
               Hint
             </button>
           )}
+          <button onClick={() => dispatch({ type: "REMOVE_OPTION" })}>
+            Remove an option
+          </button>
         </>
       )}
       {!quizState.optionSelected && quizState.help === "hint" && (

@@ -16,6 +16,7 @@
 
 #question-container button {
   border: 2px solid #fff;
+  margin: 0.5rem;
 }
 
 #question-container .hint {
