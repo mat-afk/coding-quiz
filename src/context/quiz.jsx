@@ -9,6 +9,7 @@ const initialState = {
   currentQuestion: 0,
   score: 0,
   optionSelected: "",
+  help: false,
 };
 
 const reducer = (state, action) => {
@@ -37,11 +38,18 @@ const reducer = (state, action) => {
         questions: shuffledQuestions,
       };
 
+    case "SHOW_HINT":
+      return {
+        ...state,
+        help: "hint",
+      };
+
     case "NEXT_QUESTION":
       if (!state.questions[state.currentQuestion + 1]) {
         return {
           ...state,
           stage: STAGES[3],
+          help: false,
         };
       }
 
@@ -49,6 +57,7 @@ const reducer = (state, action) => {
         ...state,
         currentQuestion: state.currentQuestion + 1,
         optionSelected: "",
+        help: false,
       };
 
     case "RESTART":
