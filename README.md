@@ -27,13 +27,13 @@ Built with React and Vite, the project uses a [`quiz context`](https://github.co
    ```
 
 4. Open the indicated port to view it in the browser.
-![Starting](image.png)
+   ![Starting](public/image.png)
 
 5. Pick a category.
-![Category selection](image-1.png)
+   ![Category selection](public/image-1.png)
 
 6. Enjoy the quiz!
-![Coding quiz](image-2.png)
-![Coding quiz](image-3.png)
-![Coding quiz](image-4.png)
-![Score](image-5.png)
+   ![Coding quiz](public/image-2.png)
+   ![Coding quiz](public/image-3.png)
+   ![Coding quiz](public/image-4.png)
+   ![Score](public/image-5.png)
