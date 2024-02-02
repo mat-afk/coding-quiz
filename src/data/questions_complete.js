@@ -38,7 +38,7 @@ const data = [
         question: "Which rule changes the color of an element?",
         options: ["color", "background-color", "font-size", "transition"],
         answer: "color",
-        tip: "Color in English",
+        tip: "It's the same as the property name",
       },
       {
         question: "To increase the font of an element we use:",
