@@ -1,0 +1,28 @@
+#category-container {
+  text-align: center;
+  max-width: 500px;
+}
+
+#category-container h2,
+#category-container p {
+  margin-bottom: 1rem;
+}
+
+#category-container p {
+  color: #8345de;
+}
+
+#category-container img {
+  margin: 2rem auto;
+  max-width: 320px;
+}
+
+#category-container button {
+  margin: 1rem;
+  width: 150px;
+}
+
+#categories {
+  display: flex;
+  align-items: center;
+}
